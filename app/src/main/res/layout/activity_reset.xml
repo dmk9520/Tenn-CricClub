@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkBlue"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.jeet.tenncricclub.ResetActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp22"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dp60">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/newpassinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
+            android:textColorHint="@color/White"
+            android:theme="@style/textinput"
+            app:backgroundTint="@color/White">
+
+            <EditText
+                android:id="@+id/newpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/newpass"
+                android:inputType="textPassword"
+                android:textColor="@color/White" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/confnewpassinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
+            android:textColorHint="@color/White"
+            android:theme="@style/textinput"
+            app:backgroundTint="@color/White">
+
+            <EditText
+                android:id="@+id/confnewpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confnewpass"
+                android:inputType="textPassword"
+                android:textColor="@color/White" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp60">
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:background="@drawable/btnstyle"
+            android:text="@string/submit"
+            android:textColor="@color/White" />
+    </LinearLayout>
+
+
+</LinearLayout>

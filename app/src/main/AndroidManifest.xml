@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jeet.tenncricclub">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Verifyotp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".otpreciever">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".edit_profile" />
+        <activity android:name=".match_details" />
+        <activity android:name=".create_game" />
+
+        <service android:name=".game_data_service" />
+        <service android:name=".prof_service" />
+        <service
+            android:name=".tournamentfetch_service"
+            android:enabled="true"
+            android:exported="true"/>
+        <service android:name=".playerjoin_service" />
+    </application>
+
+</manifest>

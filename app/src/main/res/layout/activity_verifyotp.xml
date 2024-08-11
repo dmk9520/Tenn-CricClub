@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlinear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkBlue"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.jeet.tenncricclub.Verifyotp">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp22"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp60">
+
+        <EditText
+            android:id="@+id/otpinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:clickable="true"
+            android:enabled="true"
+            android:hint="@string/verify"
+            android:inputType="textNoSuggestions|number|numberSigned"
+            android:textColor="@color/White"
+            android:textColorHint="@color/Lightgrey"
+            android:theme="@style/textinput"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/submitotp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnstyle"
+            android:enabled="true"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/White" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp60">
+
+
+        <Button
+            android:id="@+id/generate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_weight="25"
+            android:background="@drawable/btnstyle"
+            android:text="Generate OTP"
+            android:textAllCaps="false"
+            android:textColor="@color/White" />
+
+        <Button
+            android:id="@+id/otpsms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_weight="25"
+            android:background="@drawable/btnstyle"
+            android:text="@string/resendsms"
+            android:textAllCaps="false"
+            android:textColor="@color/White" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

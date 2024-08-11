@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkBlue"
+    android:orientation="vertical"
+    tools:context="com.example.jeet.tenncricclub.SignupActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp24">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/frabkit"
+            android:text="@string/edit_profile"
+            android:textColor="@color/Blue3"
+            android:textSize="@dimen/sp40" />
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10"
+        android:weightSum="10">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp12">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp24"
+                android:paddingRight="@dimen/dp24">
+
+                <LinearLayout
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:weightSum="2">
+                    <!-- Name Label -->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/firstnameinput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/grey"
+                        android:theme="@style/textinput">
+
+
+                        <EditText
+                            android:id="@+id/input_firstname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/fname"
+                            android:inputType="text"
+                            android:textColor="@color/White" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/lastnameinput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/grey"
+                        android:theme="@style/textinput">
+
+                        <EditText
+                            android:id="@+id/input_lastname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/lname"
+                            android:inputType="text"
+                            android:textColor="@color/White" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!-- Address Label -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/addressinput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp8"
+                    android:textColorHint="@color/grey"
+                    android:theme="@style/textinput">
+
+                    <EditText
+                        android:id="@+id/input_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/sadd"
+                        android:inputType="textPostalAddress"
+                        android:textColor="@color/White" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/dobinput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp8"
+                    android:textColorHint="@color/grey"
+                    android:theme="@style/textinput"
+
+                    >
+
+
+                    <EditText
+                        android:id="@+id/input_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/dateofbirth"
+                        android:inputType="date"
+                        android:onClick="onClick"
+                        android:textColor="@color/White" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- mobile number -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/phoneinput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp8"
+                    android:textColorHint="@color/grey"
+                    android:theme="@style/textinput">
+
+                    <EditText
+                        android:id="@+id/input_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mnumber"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/White" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Password Label -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/existpass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp8"
+                    android:textColorHint="@color/grey"
+                    android:theme="@style/textinput">
+
+                    <EditText
+                        android:id="@+id/input_existpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/existing_password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/White" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Password Label -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/passinput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp8"
+                    android:textColorHint="@color/grey"
+                    android:theme="@style/textinput">
+
+                    <EditText
+                        android:id="@+id/input_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/White" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Password Re-enter Label -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/confpassinput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp8"
+                    android:textColorHint="@color/grey"
+                    android:theme="@style/textinput">
+
+                    <EditText
+                        android:id="@+id/input_confpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/confnewpass"
+                        android:inputType="textPassword"
+                        android:textColor="@color/White" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Signup Button -->
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:background="@drawable/btnstyle"
+                    android:padding="@dimen/dp12"
+                    android:text="@string/update"
+                    android:textColor="@color/White" />
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp20" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

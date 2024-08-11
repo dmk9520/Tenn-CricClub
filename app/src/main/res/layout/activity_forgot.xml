@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlinear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkBlue"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.jeet.tenncricclub.ForgotActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dp60"
+        android:paddingVertical="@dimen/dp20">
+
+        <RadioGroup
+            android:id="@+id/logintype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checkedButton="@+id/radioButton"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp20"
+            android:weightSum="2">
+
+
+            <RadioButton
+                android:id="@+id/userforgot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/user_forgot"
+                android:textColor="@color/White"
+                android:theme="@style/textinput" />
+
+            <RadioButton
+                android:id="@+id/mobforgot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/mobile_forgot"
+                android:textColor="@color/White"
+                android:theme="@style/textinput" />
+        </RadioGroup>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/White"
+            android:theme="@style/textinput"
+
+            app:backgroundTint="@color/White">
+
+            <EditText
+                android:id="@+id/user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/emailuser"
+                android:paddingTop="@dimen/dp20"
+                android:textColor="@color/White"
+                android:textColorHint="@color/White"
+                android:textColorLink="@color/White"
+                app:backgroundTint="@color/White" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dp40"
+            android:background="@drawable/btnstyle"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/White" />
+
+        <TextView
+            android:id="@+id/rtnlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/rtnlogin"
+            android:textAllCaps="true"
+            android:textColor="@color/grey" />
+    </LinearLayout>
+
+
+</LinearLayout>
